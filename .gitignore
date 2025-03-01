@@ -8,8 +8,8 @@ build/
 dist/
 *.egg
 
-# Data and cache
-data/
+# Data and cache (only root-level data/ for downloaded datasets)
+/data/
 gnn_opt.egg-info/
 *.pt
 .pytest_cache/
