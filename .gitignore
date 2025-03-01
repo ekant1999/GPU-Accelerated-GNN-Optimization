@@ -1,0 +1,27 @@
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+*.egg
+
+# Data and cache
+data/
+gnn_opt.egg-info/
+*.pt
+.pytest_cache/
+.cache/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+.DS_Store
+
+# CUDA / build
+*.so
+*.o
+*.a

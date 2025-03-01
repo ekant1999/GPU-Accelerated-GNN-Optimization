@@ -1,0 +1,32 @@
+# configs/default.yaml
+dataset:
+  name: ogbn-arxiv
+  root: ./data
+
+model:
+  type: optimized_gcn
+  hidden_channels: 256
+  num_layers: 3
+  dropout: 0.5
+
+training:
+  epochs: 500
+  lr: 0.01
+  weight_decay: 5e-4
+  optimizer: adam
+
+cuda:
+  block_size: 256
+  tile_size: 16
+  warp_threshold: 32
+  use_vectorized_loads: true
+  shared_mem_cache_size: 48
+
+distributed:
+  num_gpus: 4
+  backend: nccl
+  partition_method: metis
+
+benchmark:
+  num_seeds: 5
+  warmup_epochs: 10
